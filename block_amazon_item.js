@@ -3,15 +3,15 @@ delete_specific_item	=function(arr, target_id) {
     href		=document.getElementById('widgetContent');
     if (href !== null || href !== undefined) {
         for(i=0; document.getElementById(target_id+i) !== null; i++) {
-            elem				=document.getElementById(target_id+i);
-            haystack		=elem.innerHTML;
+            elem      =document.getElementById(target_id+i);
+            haystack  =elem.innerHTML;
             arr.forEach(function(val) {
                 for($i=0; arr[$i] != undefined; $i++) {
                     if (haystack.indexOf(arr[$i]) !== -1) {
                         console.log(val + 'を非表示'); //デバッグ用
-                        elem.style.border												="solid 1px";
-                        elem.firstElementChild.style.visibility	="hidden";
-                        elem.style.backgroundColor							="gray";
+                        elem.style.border                       ="solid 1px";
+                        elem.firstElementChild.style.visibility ="hidden";
+                        elem.style.backgroundColor              ="gray";
                         break;
                     }
                 }
@@ -34,7 +34,7 @@ function getCsv(url) {
 }
 //ボタン押下時に実行する関数
 function hide_button(target_id) {
-    var url	= 'https://dl.dropboxusercontent.com/s/fr7im768zy29cjp/blacklist.csv';
+    var url = 'https://dl.dropboxusercontent.com/s/fr7im768zy29cjp/blacklist.csv';
     var arr = getCsv(url);
     if (arr === []) {
     		alert('取得したblacklistが空である例外');
