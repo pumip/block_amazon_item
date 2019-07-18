@@ -37,7 +37,7 @@ function hide_button(target_id) {
     var url = 'https://dl.dropboxusercontent.com/s/fr7im768zy29cjp/blacklist.csv';
     var arr = getCsv(url);
     if (arr === []) {
-    		alert('取得したblacklistが空である例外');
+        alert('取得したblacklistが空である例外');
     }
     intervalID = window.setInterval(delete_specific_item, 2000, arr, target_id); //delete_specific_item内から呼び出すためグローバルスコープ
 }
