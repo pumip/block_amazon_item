@@ -1,3 +1,4 @@
+use strict
 
 //押すとblacklistを含む商品を隠すボタン作成
 let btn = document.createElement("button");
