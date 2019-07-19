@@ -1,6 +1,6 @@
 
 //押すとblacklistを含む商品を隠すボタン作成
-var btn = document.createElement("button");
+let btn = document.createElement("button");
 btn.setAttribute("id", 'custom-button');
 btn.setAttribute("style", 'width:100%; height:50px;');
 btn.setAttribute("onclick", 'hide_button("100_dealView_");');
@@ -35,7 +35,7 @@ delete_specific_item	=function(arr, target_id) {
 //@rubyfmzk	https://qiita.com/rubyfmzk/items/1902453ca13e4d8662ee
 function getCsv(url) {
     //CSVファイルを文字列で取得。
-    var txt = new XMLHttpRequest();
+    let txt = new XMLHttpRequest();
     txt.open('get', url, false);
     txt.send();
     //改行ごとに配列化
@@ -43,8 +43,8 @@ function getCsv(url) {
 }
 //ボタン押下時に実行する関数
 function hide_button(target_id) {
-    var url = 'https://dl.dropboxusercontent.com/s/fr7im768zy29cjp/blacklist.csv';
-    var arr = getCsv(url);
+    let url = 'https://dl.dropboxusercontent.com/s/fr7im768zy29cjp/blacklist.csv';
+    let arr = getCsv(url);
     if (arr === []) {
         alert('取得したblacklistが空である例外');
     }
