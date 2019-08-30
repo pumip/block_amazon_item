@@ -1,4 +1,4 @@
-use strict
+//use strict
 
 //押すとblacklistを含む商品を隠すボタン作成
 let btn = document.createElement("button");
@@ -6,7 +6,7 @@ btn.setAttribute("id", 'custom-button');
 btn.setAttribute("style", 'width:100%; height:50px;');
 btn.setAttribute("onclick", 'hide_button("100_dealView_");');
 btn.innerText = "id=100_dealView_*の商品に対して実行";
-document.body.appendChild(btn);
+document.querySelector('#ap_container').appendChild(btn);
 
 //商品を隠す関数本体
 delete_specific_item	=function(arr, target_id) {
